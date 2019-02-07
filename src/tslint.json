@@ -1,0 +1,22 @@
+{
+    "extends": "../tslint.json",
+    "rules": {
+        "max-line-length": false,
+        "member-access": [true, "no-public"],
+        "no-inferrable-types": false,
+        "radix": false,
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+        "directive-selector": [
+            true,
+            "attribute",
+            "app",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "app",
+            "kebab-case"
+        ]
+    }
+}
