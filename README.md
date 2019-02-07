@@ -9,8 +9,11 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ## Build
 
 Run `npm run build` to build the project in production mode.
+
 Run `npm run build-dev` to build the project in development mode.
+
 The build artifacts will be stored in the `dist/` directory.
+
 Run `npm run serve-dist` to serve the compiled source of `dist/` folder.
 
 ## Lint
