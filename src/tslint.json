@@ -14,9 +14,15 @@
         ],
         "component-selector": [
             true,
+            "cmp",
             "element",
             "app",
             "kebab-case"
+        ],
+        "component-class-suffix": [
+          true,
+          "View",
+          "Component"
         ]
     }
 }
