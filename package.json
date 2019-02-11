@@ -1,11 +1,12 @@
 {
-  "name": "angular-components",
+  "name": "components-playground",
   "version": "0.0.1",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "npm run build-lib && ng build --prod",
     "build-dev": "ng build",
-    "serve-dist": "lite-server --baseDir=dist",
+    "build-lib": "rimraf dist && ng-packagr -p components-lib/package.json",
+    "serve-dist": "lite-server --baseDir=dist/components-playground",
     "lint": "ng lint",
     "test": "ng test",
     "e2e": "ng e2e"
@@ -45,6 +46,9 @@
     "protractor": "5.4.0",
     "ts-node": "7.0.0",
     "tslint": "5.11.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "ng-packagr": "4.7.0",
+    "rimraf": "2.6.3",
+    "tsickle": "0.34.0"
   }
 }

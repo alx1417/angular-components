@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-components": {
+    "components-playground": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/components-playground",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-components:build"
+            "browserTarget": "components-playground:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-components:build:production"
+              "browserTarget": "components-playground:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-components:build"
+            "browserTarget": "components-playground:build"
           }
         },
         "test": {
@@ -100,13 +100,14 @@
               "src/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "**/components-lib/**"
             ]
           }
         }
       }
     },
-    "angular-components-e2e": {
+    "components-playground-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-components:serve"
+            "devServerTarget": "components-playground:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-components:serve:production"
+              "devServerTarget": "components-playground:serve:production"
             }
           }
         },
@@ -133,7 +134,23 @@
           }
         }
       }
+    },
+    "components-lib": {
+      "root": "components-lib/",
+      "projectType": "library",
+      "prefix": "",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "components-lib/tsconfig.lib.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "angular-components"
+  "defaultProject": "components-playground"
 }

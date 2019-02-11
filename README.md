@@ -6,15 +6,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build
+## Build components lib
 
-Run `npm run build` to build the project in production mode.
+Run `npm run build-lib` to build the components library on `dist/components-lib`.
+
+// TODO: Publish this lib to npm repository.
+
+## Build playground
+
+Run `npm run build` to build the project in production mode, this instruction also compile the components library.
 
 Run `npm run build-dev` to build the project in development mode.
 
-The build artifacts will be stored in the `dist/` directory.
+The build artifacts will be stored in the `dist/components-playground` directory.
 
-Run `npm run serve-dist` to serve the compiled source of `dist/` folder.
+Run `npm run serve-dist` to serve the compiled source of `dist/components-playground` folder.
 
 ## Lint
 

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 // Views
 import { ButtonView } from './button.view';
-// Components
-import { ComponentsModule } from '@components/components.module';
+// Modules
+import { SharedModule } from 'app/shared.module';
 
 // Routes
 const ROUTES: Route[] = [{
@@ -16,10 +16,10 @@ const ROUTES: Route[] = [{
 @NgModule({
   imports: [
     RouterModule.forChild(ROUTES),
-    ComponentsModule,
+    SharedModule,
   ],
   declarations: [
-    ButtonView
-  ]
+    ButtonView,
+  ],
 })
 export class ButtonModule {}

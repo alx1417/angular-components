@@ -20,9 +20,10 @@
     ],
     "paths": {
       "@playground/*": ["app/playground/*"],
-      "@components/*": ["app/components/*"],
+      "@components/*": ["../components-lib/src/*"],
       "@environments/*": ["environments/*"],
       "@assets/*": ["assets/*"],
+      "components-lib": [ "../dist/components-lib" ]
     },
   }
 }
