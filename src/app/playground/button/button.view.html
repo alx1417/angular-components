@@ -1,3 +1,17 @@
-<h1>{{ title }}</h1>btn
-<cmp-button [buttons]="buttons"></cmp-button>
-<!-- <cmp-table></cmp-table> -->
+<h1>{{ title }}</h1>
+<h3>Button settings</h3>
+<label for="btnSettingsText">Button text: </label>
+<input id="btnSettingsText" type="text" value="Example text" (input)="btnSettingsChange($event)" />
+
+<label for="btnSettingsSize">Button size:</label>
+<select id="btnSettingsSize" (input)="btnSettingsChange($event)">
+  <option value="" selected>Select an option</option>
+  <option value="small">Small</option>
+  <option value="medium">Medium</option>
+  <option value="large">Large</option>
+  <option value="full">Full</option>
+  <option value="auto">Auto</option>
+  <option value="min">Min</option>
+</select>
+
+<cmp-button [buttons]="button"></cmp-button>

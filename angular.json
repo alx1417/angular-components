@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "components-lib/src/scss/styles.scss",
               "src/styles.scss"
             ],
             "scripts": []

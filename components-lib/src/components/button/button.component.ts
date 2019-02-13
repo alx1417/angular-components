@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { Button } from './button.interface';
 
 @Component({
@@ -7,7 +7,7 @@ import { Button } from './button.interface';
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent implements OnChanges {
   // List of buttons to show
   @Input() buttons: Button | Button[];
   // Emitted then click on a button, send the clicked button.
@@ -16,7 +16,7 @@ export class ButtonComponent implements OnInit {
   /**
    * Convert the button on array if is a single button.
    */
-  ngOnInit(): void {
+  ngOnChanges(): void {
     if (!Array.isArray(this.buttons)) {
       this.buttons = [this.buttons];
     }

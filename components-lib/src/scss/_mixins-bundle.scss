@@ -1,0 +1,15 @@
+// Bootstrap mixins and functions
+// @import 'bootstrap/functions';
+
+// Vendor
+@import "bootstrap/vendor/rfs";
+
+// Utilities
+@import "bootstrap/mixins/breakpoints";
+@import "bootstrap/mixins/hover";
+
+// Layout
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/grid";
+
+

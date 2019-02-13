@@ -5,11 +5,12 @@
     "start": "ng serve",
     "build": "npm run build-lib && ng build --prod",
     "build-dev": "ng build",
-    "build-lib": "rimraf dist && ng-packagr -p components-lib/package.json",
+    "build-lib": "rimraf dist && ng-packagr -p components-lib/package.json && copyfiles -u 1 components-lib/src/scss/**/* dist/components-lib",
     "serve-dist": "lite-server --baseDir=dist/components-playground",
     "lint": "ng lint",
     "test": "ng test",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "npm run build-lib"
   },
   "private": true,
   "dependencies": {
@@ -31,10 +32,11 @@
     "@angular/cli": "7.2.2",
     "@angular/compiler-cli": "7.2.0",
     "@angular/language-service": "7.2.0",
-    "@types/node": "8.9.4",
     "@types/jasmine": "2.8.8",
     "@types/jasminewd2": "2.0.3",
+    "@types/node": "8.9.4",
     "codelyzer": "4.5.0",
+    "copyfiles": "^2.1.0",
     "jasmine-core": "2.99.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "3.1.1",
@@ -43,12 +45,12 @@
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "0.2.2",
     "lite-server": "2.4.0",
-    "protractor": "5.4.0",
-    "ts-node": "7.0.0",
-    "tslint": "5.11.0",
-    "typescript": "3.2.2",
     "ng-packagr": "4.7.0",
+    "protractor": "5.4.0",
     "rimraf": "2.6.3",
-    "tsickle": "0.34.0"
+    "ts-node": "7.0.0",
+    "tsickle": "0.34.0",
+    "tslint": "5.11.0",
+    "typescript": "3.2.2"
   }
 }

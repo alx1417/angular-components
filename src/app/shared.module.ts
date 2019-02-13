@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 // Environment
 import { ENVIRONMENT } from '@environments/environment';
 // Components
-import { ComponentsModule } from '@components/components.module';
+import { ComponentsModule } from '@components/components/components.module';
 import { ComponentsModule as ComponentsModuleLib } from 'components-lib';
 
 
