@@ -1,0 +1,32 @@
+@import 'importable.bundle';
+
+// Types colors
+// Primary
+$btn-border-primary: none;
+$btn-text-color-primary: #fff;
+$btn-bg-color-primary: #26a69a;
+$btn-bg-color-primary-hover: lighten($btn-bg-color-primary, 5);
+// Secondary
+$btn-border-secondary: 1px solid #26a69a;
+$btn-text-color-secondary: #26a69a;
+$btn-bg-color-secondary: #f5fdfc;
+$btn-bg-color-secondary-hover: #fff;
+// Tertiary
+$btn-border-tertiary: 1px solid #666;
+$btn-text-color-tertiary: #666;
+$btn-bg-color-tertiary: #fafafa;
+$btn-bg-color-tertiary-hover: #fff;
+// Negative
+$btn-border-negative: 1px solid #dc3545;
+$btn-text-color-negative: #dc3545;
+$btn-bg-color-negative: #fff7f7;
+$btn-bg-color-negative-hover: #fff;
+
+// Sizes
+$btn-height: 36px;
+$btn-radius: 2px;
+$btn-font-size: .9rem;
+$btn-padding: 0 16px;
+$btn-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+@import '../button.common.component';

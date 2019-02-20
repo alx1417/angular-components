@@ -1,0 +1,15 @@
+@mixin make-col-md($size, $columns: $grid-columns) {
+  @include media-breakpoint-up(md) {
+    @include make-col($size, $columns);
+  }
+}
+@mixin make-col-lg($size, $columns: $grid-columns) {
+  @include media-breakpoint-up(lg) {
+    @include make-col($size, $columns);
+  }
+}
+@mixin make-col-xl($size, $columns: $grid-columns) {
+  @include media-breakpoint-up(xl) {
+    @include make-col($size, $columns);
+  }
+}

@@ -1,6 +1,7 @@
 // Components
-export { ComponentsModule } from './src/components/components.module';
+export { ComponentsTheme1Module } from './src/components/components.theme1.module';
+export { ComponentsTheme2Module } from './src/components/components.theme2.module';
 // Button
-export { ButtonModule, Button, ButtonComponent } from './src/components/button/index';
+export { Button, Size, BtnType, ButtonComponentTheme1, ButtonComponentTheme2 } from './src/components/button/index';
 // Table
 export { TableModule, TableComponent } from './src/components/table/index';

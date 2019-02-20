@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 // Components modules
-import { ButtonModule } from './button/index';
+import { ButtonModule } from './button/theme2/button.module';
 import { TableModule } from './table/index';
 
 @NgModule({
@@ -14,4 +14,4 @@ import { TableModule } from './table/index';
     TableModule,
   ],
 })
-export class ComponentsModule {}
+export class ComponentsTheme2Module {}

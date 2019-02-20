@@ -1,13 +1,7 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, OnChanges } from '@angular/core';
-import { Button } from './button.interface';
+import { Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Button } from './button.common.interface';
 
-@Component({
-  selector: 'cmp-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-})
-export class ButtonComponent implements OnChanges {
+export class ButtonCommonComponent implements OnChanges {
   // List of buttons to show
   @Input() buttons: Button | Button[];
   // Emitted then click on a button, send the clicked button.

@@ -30,6 +30,11 @@
               "components-lib/src/scss/styles.scss",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "components-lib/src/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

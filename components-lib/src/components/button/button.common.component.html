@@ -1,0 +1,23 @@
+<div class="btn-group-wrapper row">
+  <div
+    *ngFor="let btn of buttons"
+    class="btn-wrapper"
+    [class.btn-small]="btn.size === 'small'"
+    [class.btn-medium]="btn.size === 'medium'"
+    [class.btn-large]="btn.size === 'large'"
+    [class.btn-full]="btn.size === 'full'"
+    [class.col]="btn.size === 'auto'"
+    [class.btn-content]="btn.size === 'content' || !btn.size">
+    <button
+      type="button"
+      class="btn"
+      [class.btn-primary]="btn.type === 'primary' || !btn.type"
+      [class.btn-secondary]="btn.type === 'secondary'"
+      [class.btn-tertiary]="btn.type === 'tertiary'"
+      [class.btn-negative]="btn.type === 'negative'"
+      [disabled]="btn.disabled"
+      (click)="onClick(btn)">
+      {{ btn.text }}<i *ngIf="!!btn.icon" class="material-icons {{ btn.iconPosition === 'left' ? 'left' : 'right' }}">{{btn.icon}}</i>
+    </button>
+  </div>
+</div>

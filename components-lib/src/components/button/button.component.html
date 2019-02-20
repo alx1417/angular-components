@@ -1,7 +1,0 @@
-<button
-  type="button"
-  *ngFor="let btn of buttons"
-  class="btn"
-  (click)="onClick(btn)">
-  {{ btn.text }}<i *ngIf="!!btn.icon" class="material-icons {{ btn.iconPosition === 'left' ? 'left' : 'right' }}">{{btn.icon}}</i>
-</button>

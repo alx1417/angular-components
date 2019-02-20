@@ -4,15 +4,19 @@
  * large: 75% on xl and lg, 100% on md, sm and xs
  * full: 100% on xl, lg, md, sm and xs
  * auto: fluid size (one element 100%, two elements 50%, etc.)
- * min: No forced size, only the content size.
+ * content: No forced size, only the content size. DEFAULT
  */
-export type Size = 'small' | 'medium' | 'large' | 'full' | 'auto' | 'min';
+export type Size = 'small' | 'medium' | 'large' | 'full' | 'auto' | 'content';
+
+export type BtnType = 'primary' | 'secondary' | 'tertiary' | 'negative';
 
 export interface Button {
   id: string;
   text: string;
+  type?: BtnType;
   size?: Size;
   sizeMob?: Size;
-  icon?: string;
-  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+  // icon?: string;
+  // iconPosition?: 'left' | 'right';
 }

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table.component';
-import { ButtonModule } from '../button/index';
+// import { ButtonModule } from '../button/index';
 
 @NgModule({
   imports: [
     CommonModule,
-    ButtonModule,
+    // ButtonModule,
   ],
   declarations: [
     TableComponent,
