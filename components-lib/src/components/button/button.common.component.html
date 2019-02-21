@@ -6,8 +6,14 @@
     [class.btn-medium]="btn.size === 'medium'"
     [class.btn-large]="btn.size === 'large'"
     [class.btn-full]="btn.size === 'full'"
-    [class.col]="btn.size === 'auto'"
-    [class.btn-content]="btn.size === 'content' || !btn.size">
+    [class.btn-auto]="btn.size === 'auto'"
+    [class.btn-content]="btn.size === 'content' || !btn.size"
+    [class.btn-mob-small]="btn.sizeMob === 'small'"
+    [class.btn-mob-medium]="btn.sizeMob === 'medium'"
+    [class.btn-mob-large]="btn.sizeMob === 'large'"
+    [class.btn-mob-full]="btn.sizeMob === 'full'"
+    [class.btn-mob-auto]="btn.sizeMob === 'auto'"
+    [class.btn-mob-content]="btn.sizeMob === 'content'">
     <button
       type="button"
       class="btn"

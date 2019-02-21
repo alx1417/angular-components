@@ -1,6 +1,6 @@
 <h2>{{ title }}</h2>
 <div class="row">
-  <div class="col">
+  <div class="col-12 col-md-6">
     <h3>Button settings</h3>
     <label for="btnSettingsText">Button text:</label>
     <input id="btnSettingsText" type="text" value="Example text" (input)="btnSettingsChange()" /><br />
@@ -14,6 +14,16 @@
       <option value="auto">Auto</option>
       <option value="content">Content (default)</option>
     </select><br />
+    <label for="btnSettingsSizeMob">Button size Mob:</label>
+    <select id="btnSettingsSizeMob" (input)="btnSettingsChange()">
+      <option value="" selected>Select an option</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <option value="full">Full</option>
+      <option value="auto">Auto</option>
+      <option value="content">Content</option>
+    </select><br />
     <label for="btnSettingsType">Button type:</label>
     <select id="btnSettingsType" (input)="btnSettingsChange()">
       <option value="" selected>Select an option</option>
@@ -26,7 +36,7 @@
     <input id="btnSettingsDisabled" type="checkbox" value="disabled" (input)="btnSettingsChange()" /><br />
     <cmp-button-theme1 [buttons]="[{id: 'addBtn', text: 'Add button'}, {id: 'removeBtn', text: 'Remove button'}]" (btnClick)="handlerClickBtnAddRemove($event)"></cmp-button-theme1>
   </div>
-  <div class="col">
+  <div class="col-12 col-md-6">
     <h3>Theme 1</h3>
     <cmp-button-theme1 [buttons]="buttonTheme1"></cmp-button-theme1>
     <h3>Theme 2</h3>

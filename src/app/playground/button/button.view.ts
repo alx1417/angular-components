@@ -37,6 +37,7 @@ export class ButtonView implements OnInit {
         btn.text = this.element.nativeElement.querySelector('#btnSettingsText').value;
       }
       btn.size = this.element.nativeElement.querySelector('#btnSettingsSize').value;
+      btn.sizeMob = this.element.nativeElement.querySelector('#btnSettingsSizeMob').value;
       btn.type = this.element.nativeElement.querySelector('#btnSettingsType').value;
       btn.disabled = this.element.nativeElement.querySelector('#btnSettingsDisabled').checked;
     });
@@ -45,6 +46,7 @@ export class ButtonView implements OnInit {
         btn.text = this.element.nativeElement.querySelector('#btnSettingsText').value;
       }
       btn.size = this.element.nativeElement.querySelector('#btnSettingsSize').value;
+      btn.sizeMob = this.element.nativeElement.querySelector('#btnSettingsSizeMob').value;
       btn.type = this.element.nativeElement.querySelector('#btnSettingsType').value;
       btn.disabled = this.element.nativeElement.querySelector('#btnSettingsDisabled').checked;
     });
@@ -56,6 +58,7 @@ export class ButtonView implements OnInit {
       id: 'btnTheme1',
       text: this.element.nativeElement.querySelector('#btnSettingsText').value,
       size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
+      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
       type: this.element.nativeElement.querySelector('#btnSettingsType').value,
       disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
     };
@@ -63,6 +66,7 @@ export class ButtonView implements OnInit {
       id: 'btnTheme2',
       text: this.element.nativeElement.querySelector('#btnSettingsText').value,
       size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
+      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
       type: this.element.nativeElement.querySelector('#btnSettingsType').value,
       disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
     };
@@ -73,6 +77,7 @@ export class ButtonView implements OnInit {
       id: 'dynamicBtnTheme1_' + this.dynamicButtonsNum,
       text: 'Dynamic btn ' + this.dynamicButtonsNum,
       size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
+      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
       type: this.element.nativeElement.querySelector('#btnSettingsType').value,
       disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
     });
@@ -80,6 +85,7 @@ export class ButtonView implements OnInit {
       id: 'dynamicBtnTheme2_' + this.dynamicButtonsNum,
       text: 'Dynamic btn ' + this.dynamicButtonsNum,
       size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
+      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
       type: this.element.nativeElement.querySelector('#btnSettingsType').value,
       disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
     });
