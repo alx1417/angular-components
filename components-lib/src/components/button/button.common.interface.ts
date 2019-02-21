@@ -12,7 +12,7 @@ export type BtnType = 'primary' | 'secondary' | 'tertiary' | 'negative';
 
 export interface Button {
   id: string;
-  text: string;
+  text?: string;
   type?: BtnType;
   size?: Size;
   sizeMob?: Size;

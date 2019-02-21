@@ -17,7 +17,7 @@ export class ButtonView implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.initBtns();
+    this.initButtons();
   }
 
   handlerClickBtnAddRemove(btn: Button): void {
@@ -33,62 +33,39 @@ export class ButtonView implements OnInit {
 
   btnSettingsChange(): void {
     this.buttonTheme1.forEach((btn, index) => {
-      if (index === 0) {
-        btn.text = this.element.nativeElement.querySelector('#btnSettingsText').value;
-      }
-      btn.size = this.element.nativeElement.querySelector('#btnSettingsSize').value;
-      btn.sizeMob = this.element.nativeElement.querySelector('#btnSettingsSizeMob').value;
-      btn.type = this.element.nativeElement.querySelector('#btnSettingsType').value;
-      btn.disabled = this.element.nativeElement.querySelector('#btnSettingsDisabled').checked;
+      this.updateButtonsSettings(btn, index === 0);
     });
     this.buttonTheme2.forEach((btn, index) => {
-      if (index === 0) {
-        btn.text = this.element.nativeElement.querySelector('#btnSettingsText').value;
-      }
-      btn.size = this.element.nativeElement.querySelector('#btnSettingsSize').value;
-      btn.sizeMob = this.element.nativeElement.querySelector('#btnSettingsSizeMob').value;
-      btn.type = this.element.nativeElement.querySelector('#btnSettingsType').value;
-      btn.disabled = this.element.nativeElement.querySelector('#btnSettingsDisabled').checked;
+      this.updateButtonsSettings(btn, index === 0);
     });
     this.refreshButtons();
   }
 
-  private initBtns(): void {
-    this.buttonTheme1[0] = {
-      id: 'btnTheme1',
-      text: this.element.nativeElement.querySelector('#btnSettingsText').value,
-      size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
-      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
-      type: this.element.nativeElement.querySelector('#btnSettingsType').value,
-      disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
-    };
-    this.buttonTheme2[0] = {
-      id: 'btnTheme2',
-      text: this.element.nativeElement.querySelector('#btnSettingsText').value,
-      size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
-      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
-      type: this.element.nativeElement.querySelector('#btnSettingsType').value,
-      disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
-    };
+  private updateButtonsSettings(btn: Button, isFirstBtn: boolean = true): Button {
+    if (isFirstBtn) {
+      btn.text = this.element.nativeElement.querySelector('#btnSettingsText').value;
+    }
+    btn.size = this.element.nativeElement.querySelector('#btnSettingsSize').value;
+    btn.sizeMob = this.element.nativeElement.querySelector('#btnSettingsSizeMob').value;
+    btn.type = this.element.nativeElement.querySelector('#btnSettingsType').value;
+    btn.disabled = this.element.nativeElement.querySelector('#btnSettingsDisabled').checked;
+    return btn;
+  }
+
+  private initButtons(): void {
+    this.buttonTheme1[0] = this.updateButtonsSettings({ id: 'btnTheme1' });
+    this.buttonTheme2[0] = this.updateButtonsSettings({ id: 'btnTheme2' });
   }
   private addButton(): void {
     this.dynamicButtonsNum++;
-    this.buttonTheme1.push({
+    this.buttonTheme1.push(this.updateButtonsSettings({
       id: 'dynamicBtnTheme1_' + this.dynamicButtonsNum,
       text: 'Dynamic btn ' + this.dynamicButtonsNum,
-      size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
-      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
-      type: this.element.nativeElement.querySelector('#btnSettingsType').value,
-      disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
-    });
-    this.buttonTheme2.push({
+    }, false));
+    this.buttonTheme2.push(this.updateButtonsSettings({
       id: 'dynamicBtnTheme2_' + this.dynamicButtonsNum,
       text: 'Dynamic btn ' + this.dynamicButtonsNum,
-      size: this.element.nativeElement.querySelector('#btnSettingsSize').value,
-      sizeMob: this.element.nativeElement.querySelector('#btnSettingsSizeMob').value,
-      type: this.element.nativeElement.querySelector('#btnSettingsType').value,
-      disabled: this.element.nativeElement.querySelector('#btnSettingsDisabled').checked,
-    });
+    }, false));
     this.refreshButtons();
   }
 
