@@ -1,0 +1,12 @@
+<div [formGroup]="form">
+  <label [attr.for]="itemClass.id">{{ itemClass.label }}</label>
+  <input
+      [formControlName]="itemClass.key"
+      [attr.id]="itemClass.id"
+      [attr.type]="itemClass.type"
+      [attr.autocomplete]="itemClass.autocomplete"
+      [attr.autocorrect]="itemClass.autocorrect"
+      [attr.autocapitalize]="itemClass.autocapitalize"
+      [attr.spellcheck]="itemClass.spellcheck"
+    />
+</div>

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const ROUTES: Routes = [
   { path: 'dashboard', loadChildren: './playground/dashboard/dashboard.module#DashboardModule' },
   { path: 'button', loadChildren: './playground/button/button.module#ButtonModule' },
+  { path: 'form', loadChildren: './playground/form/form.module#FormModule' },
   { path: '**', redirectTo: 'dashboard' },
 ];
 

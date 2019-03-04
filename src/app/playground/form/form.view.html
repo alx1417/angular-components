@@ -1,0 +1,12 @@
+<h2>{{ title }}</h2>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <h3>Input settings</h3>
+  </div>
+  <div class="col-12 col-md-6">
+    <form [formGroup]="form.group">
+      <h3>Inputs</h3>
+      <cmp-input-form [itemClass]="form.items['testInput1']"></cmp-input-form>
+    </form>
+  </div>
+</div>
